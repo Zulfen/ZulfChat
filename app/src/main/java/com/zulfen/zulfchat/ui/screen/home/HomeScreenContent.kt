@@ -1,6 +1,5 @@
 package com.zulfen.zulfchat.ui.screen.home
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
@@ -34,7 +33,7 @@ fun Messages() {
     LazyColumn(modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally) {
         items(10) {
-            ContactBox()
+            ContactBox("Account $it", "Example message.")
             Divider(
                 modifier = Modifier.fillMaxWidth(0.95f),
                 thickness = 1.dp,
