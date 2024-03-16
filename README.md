@@ -1,5 +1,5 @@
 # ZulfChat
-A really simple chat app made with Jetpack Compose. This project's code and structure will change quite a bit as I am using this project to learn Android development.
+A really simple chat app made with Jetpack Compose. This project's code and structure will change quite a bit as I am using this project to learn Android development, Kotlin and Gradle.
 
 Using the awesome [Compose Destinations](https://github.com/raamcosta/compose-destinations) library by raamcosta for navigation!
 
