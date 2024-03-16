@@ -2,30 +2,21 @@ package com.zulfen.zulfchat.ui.screen.home
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.*
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.zulfen.zulfchat.ui.common.CommonScaffolding
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootGraph
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.zulfen.zulfchat.ui.screen.home.composables.ContactBox
 
-
-@OptIn(ExperimentalMaterial3Api::class)
+@Destination<RootGraph>(start = true)
 @Composable
-fun HomeScreenContent() {
-    CommonScaffolding(topBar = {
-        TopAppBar(
-            colors = TopAppBarDefaults.mediumTopAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                titleContentColor = MaterialTheme.colorScheme.primary,
-            ),
-            title = {
-                Text("ZulfChat")
-            }
-        )
-    }, content = { Messages() })
+fun HomeScreen(navigator: DestinationsNavigator) {
+    Messages()
 }
 
 @Composable
