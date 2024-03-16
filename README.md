@@ -5,6 +5,4 @@ Using the awesome [Compose Destinations](https://github.com/raamcosta/compose-de
 
 Learning mainly using Philip Lackner's really useful tutorials. Here are some of the code / repos I have referenced to make this:
 
-https://github.com/philipplackner/SharingDataBetweenScreens
-
 https://github.com/raamcosta/compose-destinations/tree/main/sample
