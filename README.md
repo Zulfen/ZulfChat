@@ -7,6 +7,9 @@ Learning mainly using Philip Lackner's really useful tutorials. Here are some of
 
 https://github.com/raamcosta/compose-destinations/tree/main/sample
 
+## Screenshots
+*Coming soon!*
+
 ## TODO:
 - Implement a couple of basic modules to interface with an API using Dagger Hilt.
 - Create a shared ViewModel that contains information about UI state.
