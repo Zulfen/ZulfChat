@@ -10,6 +10,7 @@ import com.ramcosta.composedestinations.generated.NavGraphs
 import com.zulfen.zulfchat.ui.common.ZulfChatScaffolding
 import com.zulfen.zulfchat.ui.common.bottombar.BottomBar
 
+
 @Composable
 fun ZulfChat() {
     val navController = rememberNavController()
@@ -28,5 +29,6 @@ fun ZulfChat() {
             startRoute = startRoute
         )
     }
-
 }
+
+

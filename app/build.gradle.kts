@@ -1,9 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp") version "1.8.10-1.0.9"
-    id("com.google.dagger.hilt.android") version "2.44" apply false
-    // hilt needs kapt i think even though we have ksp idk
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
     kotlin("kapt")
 }
 
@@ -84,10 +83,20 @@ dependencies {
     ksp("io.github.raamcosta.compose-destinations:ksp:2.0.0-alpha07")
     implementation("io.github.raamcosta.compose-destinations:bottom-sheet:2.1.0-alpha06")
     implementation("com.google.dagger:hilt-android:2.49")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.3")
 }
 
 // Allow references to generated code
 kapt {
     correctErrorTypes = true
+}
+
+// i really don't know why but the project will not build without this
+hilt {
+    enableAggregatingTask = false
 }

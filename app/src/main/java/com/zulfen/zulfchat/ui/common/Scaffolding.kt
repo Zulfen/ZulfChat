@@ -8,6 +8,8 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.livedata.observeAsState
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.ramcosta.composedestinations.spec.DestinationSpec
 import com.ramcosta.composedestinations.spec.Route
@@ -21,19 +23,28 @@ fun ZulfChatScaffolding(
     startRoute: Route,
     navController: NavHostController,
     bottomBar: @Composable (DestinationSpec) -> Unit,
+    viewModel: SharedViewModel = hiltViewModel(),
     content: @Composable (PaddingValues) -> Unit,
 ) {
     val destination = navController.currentDestinationAsState().value
         ?: startRoute.startDestination
     //val navBackStackEntry = navController.currentBackStackEntry
 
+    val isButtonVisible = viewModel.showCreateChat.observeAsState()
+
     Scaffold(
         bottomBar = { bottomBar(destination) },
         content = content,
         floatingActionButton = {
-            FloatingActionButton(onClick = { }) {
-                Icon(Icons.Default.Create, contentDescription = "New Chat")
+
+            if (isButtonVisible.value == true) {
+                FloatingActionButton(onClick = {
+                    viewModel.updateScaffolding()
+                }) {
+                    Icon(Icons.Default.Create, contentDescription = "New Chat")
+                }
             }
+
         }
     )
 
