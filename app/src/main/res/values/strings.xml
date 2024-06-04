@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ZulfChat</string>
     <string name="home_screen_name">Home</string>
+    <string name="chat_screen_name">Chat</string>
 </resources>

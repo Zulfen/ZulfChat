@@ -1,6 +1,7 @@
 package com.zulfen.zulfchat.ui.common
 
 import androidx.annotation.StringRes
+import com.ramcosta.composedestinations.generated.destinations.ChatScreenDestination
 import com.ramcosta.composedestinations.generated.destinations.HomeScreenDestination
 import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
 import com.zulfen.zulfchat.R
@@ -9,4 +10,5 @@ import com.zulfen.zulfchat.R
 
 open class ScreenDescriptor(val direction: DirectionDestinationSpec, @StringRes val label: Int) {
     object HomeScreen : ScreenDescriptor(HomeScreenDestination, R.string.home_screen_name)
+    object ChatScreen : ScreenDescriptor(ChatScreenDestination, R.string.chat_screen_name)
 }

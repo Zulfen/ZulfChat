@@ -26,7 +26,8 @@ fun Messages() {
         items(10) {
             ContactBox("Account $it", "Example message.")
             Divider(
-                modifier = Modifier.fillMaxWidth(0.95f),
+                modifier = Modifier
+                    .fillMaxWidth(0.95f),
                 thickness = 1.dp,
                 color = Color.Gray
             )
